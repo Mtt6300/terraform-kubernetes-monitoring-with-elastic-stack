@@ -3,7 +3,7 @@
 
 ![ES-TF](https://devopsdatacenter.files.wordpress.com/2022/05/elasticseach_terraform.png)
 
-With this [Terraform module](https://registry.terraform.io/modules/) you can easily deploy and manage [Elastic Stack](https://www.elastic.co/elastic-stack/) with [Helm](https://helm.sh/) for reaching to observability and monitoring [Kubernetes](https://kubernetes.io/) cluster and applications.
+With this [Terraform module](https://registry.terraform.io/modules/Mtt6300/monitoring-with-elastic-stack/kubernetes/latest) you can easily deploy and manage [Elastic Stack](https://www.elastic.co/elastic-stack/) with [Helm](https://helm.sh/) for reaching to observability and monitoring [Kubernetes](https://kubernetes.io/) cluster and applications.
 
 Here is all tools which can deploy and configure with this module
 
@@ -34,7 +34,7 @@ provider "helm" {
 
 module "monitoring-with-elastic-stack" {
   source  = "Mtt6300/monitoring-with-elastic-stack/kubernetes"
-  version = "1.4.0"
+  version = "1.0.0"
   stack-version = "7.13.0"
 }
 ```
@@ -56,7 +56,7 @@ provider "helm" {
 
 module "monitoring-with-elastic-stack" {
   source  = "Mtt6300/monitoring-with-elastic-stack/kubernetes"
-  version = "1.4.0"
+  version = "1.0.0"
   stack-version = "7.13.0"
   namespace= "elastic-monitoring"
   
@@ -98,7 +98,7 @@ provider "helm" {
 
 module "monitoring-with-elastic-stack" {
   source  = "Mtt6300/monitoring-with-elastic-stack/kubernetes"
-  version = "1.4.0"
+  version = "1.0.0"
   stack-version = "7.13.0"
   namespace= "elastic-monitoring"
 
@@ -161,7 +161,7 @@ This is Kubernetes Cron job which will trigger every 24 hours by default and wil
 # Input
 https://registry.terraform.io/modules/Mtt6300/monitoring-with-elastic-stack/kubernetes/latest?tab=inputs
 
-There is some input variables that can customize your configurations (You can see list of variables in [Terraform registry module page](https://registry.terraform.io/modules/) ) but if you want more configment you can pass your helm values file as a argument to module. 
+There is some input variables that can customize your configurations (You can see list of variables in [Terraform registry module page](https://registry.terraform.io/modules/Mtt6300/monitoring-with-elastic-stack/kubernetes/latest) ) but if you want more configment you can pass your helm values file as a argument to module. 
 
 4) Here is full feature config for module which configured with your own helm values file : 
 ```tf
@@ -176,7 +176,7 @@ provider "helm" {
 
 module "monitoring-with-elastic-stack" {
   source  = "Mtt6300/monitoring-with-elastic-stack/kubernetes"
-  version = "1.4.0"
+  version = "1.0.0"
   namespace= "elastic-monitoring"
   elasticsearch-credentials-username = "elastic"
   elasticsearch-credentials-password = "elastic"
